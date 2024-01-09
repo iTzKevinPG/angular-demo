@@ -1,0 +1,92 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #38419d; /* Cambiado a uno de los colores de la nueva paleta */
+}
+
+h1 {
+  color: #52d3d8; /* Cambiado a uno de los colores de la nueva paleta */
+}
+
+h4 {
+  color: #3887be; /* Cambiado a uno de los colores de la nueva paleta */
+}
+
+form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 15px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:last-child {
+  margin-bottom: 30px;
+}
+
+#centered-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #52d3d8; /* Cambiado a uno de los colores de la nueva paleta */
+  border-radius: 5px;
+  color: #fff; /* Cambiado a blanco para mayor contraste */
+  background-color: #52d3d8; /* Cambiado a uno de los colores de la nueva paleta */
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  margin: 0 0.5rem;
+}
+
+#centered-button:hover {
+  background-color: #fff;
+  color: #52d3d8; /* Cambiado a uno de los colores de la nueva paleta */
+}
+
+#centered-button + #centered-button {
+  margin-left: 10px;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.employee-table tr {
+  background-color: #f2f2f2;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #9a9999;
+}
+
+.employee-table th {
+  background-color: #dabfbf;
+}
+
+.employee-table tr:hover {
+  background-color: #52d3d8;
+}

@@ -1,0 +1,80 @@
+<h1>Hola esto es el despliegue de angular en AWS!!</h1>
+<h4>v 3.0</h4>
+<form>
+  <div class="form-field">
+    <label for="socialId">ID Social:</label>
+    <input
+      type="text"
+      id="socialId"
+      name="socialId"
+      placeholder="Ingrese el ID Social"
+      [(ngModel)]="socialId"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="firstName">Nombre:</label>
+    <input
+      type="text"
+      id="firstName"
+      name="firstName"
+      placeholder="Ingrese el Nombre"
+      [(ngModel)]="firstName"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="salary">Salario:</label>
+    <input
+      type="text"
+      id="salary"
+      name="salary"
+      placeholder="Ingrese el Salario"
+      [(ngModel)]="salary"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="country">País:</label>
+    <input
+      type="text"
+      id="country"
+      name="country"
+      placeholder="Ingrese el País"
+      [(ngModel)]="country"
+    />
+  </div>
+
+  <button id="centered-button" type="button" (click)="submitForm(true, 0)">
+    Consumir Api GET ALL
+  </button>
+  <button id="centered-button" type="button" (click)="submitForm(false, 1)">
+    Consumir Api GET ONCE
+  </button>
+  <button id="centered-button" type="button" (click)="submitPost()">
+    Consumir Api POST
+  </button>
+  <button id="centered-button" type="button" (click)="submitPut()">
+    Consumir Api PUT
+  </button>
+</form>
+
+<table class="employee-table">
+  <thead>
+    <tr>
+      <th>ID Social</th>
+      <th>Nombre</th>
+      <th>Salario</th>
+      <th>País</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Utiliza *ngFor para iterar sobre la lista de empleados y mostrar cada uno en una fila -->
+    <tr *ngFor="let employee of employeeList">
+      <td>{{ employee.personalInfo.socialId }}</td>
+      <td>{{ employee.personalInfo.firstName }}</td>
+      <td>{{ employee.payrollInfo.salary }}</td>
+      <td>{{ employee.payrollInfo.country }}</td>
+    </tr>
+  </tbody>
+</table>

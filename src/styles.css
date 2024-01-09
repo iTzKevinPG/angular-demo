@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url(assets/svg/circuit-board.svg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h4 {
+  padding: 1rem;
+  background-color: #38419d;
+}

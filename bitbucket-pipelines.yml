@@ -1,0 +1,27 @@
+image: node:18
+
+pipelines:
+  branches:
+    main:
+      - step:
+          name: Installation
+          caches:
+            - node
+          script:
+            - npm install
+          artifacts:
+            - node_modules/** # Save modules for next steps
+      - step:
+          name: Build
+          script:
+            - npm run build -- --configuration=production
+          artifacts:
+            - dist/** # Save build for next steps
+      - step:
+          name: Deploy
+          script:
+            - echo "$(ls -la)"
+            - echo "$(ls -la dist)"
+            - echo "$(ls -la dist/angular-demo-bitbucket)"
+            - ssh ec2-user@18.234.42.229 sudo rm -r /data/nginx/angular-demo-bitbucket
+            - scp -r dist/angular-demo-bitbucket ec2-user@18.234.42.229:/data/nginx
